@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arch Square Interior</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      background-color: #fafafa;
+    }
+    header {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #1a1a1a;
+      color: white;
+      margin-top: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #0078ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #005ec2;
+    }
+	html {
+  scroll-behavior: smooth;
+	}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+  <img src="Arch_Square_Interior_logo.png" alt="Arch Square Interior Logo" class="logo">
+  <div class="header-text">
+    <h1>Arch Square Interior</h1>
+    <p>Designing your dream spaces with elegance & precision</p>
+  </div>
+</header>
+
+<style>
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: #fafafa;
+  color: #222;
+  padding: 1.5rem;
+}
+
+/* Logo size */
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Text styling */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.2;
+}
+.header-text h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #111;
+}
+.header-text p {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 1rem;
+  }
+  .header-text {
+    align-items: center;
+  }
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+  .header-text p {
+    font-size: 0.9rem;
+  }
+  .logo {
+    height: 50px;
+  }
+}
+</style>
+
+
+
+
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Arch Square Interior is a full-service interior design studio specializing in
+      residential and commercial interiors. Our goal is to create timeless spaces
+      that balance functionality, comfort, and aesthetic appeal.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Residential Interior Design</li>
+      <li>Office & Commercial Spaces</li>
+      <li>3D Visualization</li>
+      <li>Modular Kitchen & Furniture</li>
+      <li>Turnkey Project Solutions</li>
+    </ul>
+  </section>
+
+  <section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <p>Explore some of our recent projects that reflect creativity and craftsmanship.</p>
+    <p><em>(Add project images or links here later.)</em></p>
+  </section>
+
+ <section id="contact">
+  <h2>Contact Us</h2>
+  <p>Have a project in mind? Let’s discuss your vision.</p>
+
+  <form action="https://formspree.io/f/mvgwlwgr" method="POST" style="max-width:400px;margin:auto;text-align:left;">
+    <label>Full Name:</label><br>
+    <input type="text" name="fullname" required style="width:100%;padding:8px;margin:5px 0;"><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required style="width:100%;padding:8px;margin:5px 0;"><br>
+
+    <label>Message:</label><br>
+    <textarea name="message" rows="5" required style="width:100%;padding:8px;margin:5px 0;"></textarea><br>
+
+    <button type="submit" style="background:#0078ff;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">Send Message</button>
+  </form>
+
+  <p style="text-align:center;margin-top:1rem;">
+    Or email us directly at <a href="mailto:archsquare7@gmail.com">archsquare7@gmail.com</a>
+  </p>
+</section>
+
+
+  <footer>
+    &copy; 2025 Arch Square Interior | Designed by Siddharth Kamble
+  </footer>
+</body>
+</html>
