@@ -67,6 +67,61 @@
 	html {
   scroll-behavior: smooth;
 	}
+	
+	
+	
+	
+	.slider {
+  position: relative;
+  max-width: 35%;
+  height: 20%;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slides img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  display: none;
+}
+
+.slides img.active {
+  display: block;
+}
+
+/* Prev/Next Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.75);
+}
+
+.prev { left: 12px; }
+.next { right: 12px; }
+
+
   </style>
 </head>
 <body>
@@ -169,10 +224,22 @@
   </section>
 
   <section id="portfolio">
-    <h2>Our Portfolio</h2>
-    <p>Explore some of our recent projects that reflect creativity and craftsmanship.</p>
-    <p><em>(Add project images or links here later.)</em></p>
-  </section>
+  <h2>Our Portfolio</h2>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="IMG_3845.jpg" class="active" alt="Portfolio 1">
+      <img src="IMG_3971.jpg" alt="Portfolio 2">
+      <img src="IMG_5300.jpg" alt="Portfolio 3">
+      <img src="IMG_5302.jpg" alt="Portfolio 4">
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+
 
  <section id="contact">
   <h2>Contact Us</h2>
@@ -200,5 +267,65 @@
   <footer>
     &copy; 2025 Arch Square Interior | Designed by Siddharth Kamble
   </footer>
+  
+  
+  
+  <script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slides img");
+  const prev = document.querySelector(".prev");
+  const next = document.querySelector(".next");
+  let autoSlide;
+
+  // Show specific slide
+  function showSlide(n) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === n) slide.classList.add("active");
+    });
+  }
+
+  // Next slide
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  // Prev slide
+  function prevSlide() {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  // Auto slide every 4 seconds
+  function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, 4000);
+  }
+
+  // Stop auto slide when user interacts
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  // Event listeners
+  next.addEventListener("click", () => {
+    stopAutoSlide();
+    nextSlide();
+    startAutoSlide();
+  });
+
+  prev.addEventListener("click", () => {
+    stopAutoSlide();
+    prevSlide();
+    startAutoSlide();
+  });
+
+  // Initialize
+  showSlide(slideIndex);
+  startAutoSlide();
+</script>
+
+
+
 </body>
 </html>
